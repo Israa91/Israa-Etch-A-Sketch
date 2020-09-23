@@ -31,7 +31,7 @@ const randomColor = () => {
 //function to draw colors
 const draw = () => {
     const items = container.children;
-    for (i = 0; items.length > i; i++) {
+    for (i = 0; I<items.length ; i++) {
         items[i].childNodes.forEach(item => {
             item.addEventListener('mouseover', e => {
                 e.target.style.backgroundColor = 'black';
@@ -43,13 +43,13 @@ const draw = () => {
 //function to reset grid
 const reset = () => {
     container.innerHTML = " ";
-    createDiv(prompt('', 36))
+    createDiv(prompt('', 16))
     draw()
 
 }
 
 window.addEventListener('DOMContentLoaded', ()=>{
-    if(screen.width < 1200){
+    if(screen.width < 960){
         alert('This page is best viewed on desktop browsers!');
     }
     createDiv(16)
